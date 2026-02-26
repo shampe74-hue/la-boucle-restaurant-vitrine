@@ -2,26 +2,59 @@
 @use "../base/variable.scss" as *;
 
 .main_p_restaurant {
-  max-width: 1200px;
-  width: 80%;
-  margin: 2rem auto;
+  max-width: 1800px;
+  margin: 0 auto;
+}
 
+.photo {
+  min-height: 50dvh;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  @include flexbox(column, flex-start, center);
+  h2 {
+    text-align: center;
+  }
+}
+
+.card {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.loc {
+  @include flexbox(column, center, center);
+  background-color: white;
+  padding: 1rem;
+  .loc_map {
+    width: 95%;
+    margin: 0 auto;
+
+    iframe {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@include responsive($bp-md) {
   .photo {
-    min-height: 50dvh;
+    @include flexbox(row, flex-start, flex-start);
+    flex-wrap: wrap;
     h2 {
-      text-align: center;
+      flex: 0 0 100%;
     }
   }
 
-  .loc {
-    @include flexbox(column, center, center);
-    .loc_map {
-      width: 100%;
+  .photo_diapo {
+    flex: 0 0 50%;
+  }
 
-      iframe {
-        width: 100%;
-        object-fit: cover;
-      }
-    }
+  .card {
+    flex: 1 0 40%;
+    margin: auto 0;
   }
 }

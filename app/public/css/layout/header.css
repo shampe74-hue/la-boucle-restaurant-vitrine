@@ -1,4 +1,4 @@
-header {
+.header-home {
   position: relative;
   background-color: #8b4512;
   color: white;
@@ -7,44 +7,32 @@ header {
   justify-content: space-between;
   align-items: stretch;
 }
-header .header_top {
+.header-home nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex: 0 0 100%;
-}
-header .header_top figure {
-  margin-inline: 0.7rem;
-  border: none;
-}
-header .header_top button {
-  border: none;
-  background: inherit;
-  color: white;
-}
-header nav {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
+  left: 0;
   top: 0;
   right: 0;
   height: 100dvh;
   width: 100%;
   pointer-events: none;
-  background-color: #eb8b46;
+  background: rgba(235, 139, 70, 0.7);
+  backdrop-filter: blur(8px);
   overflow: hidden;
   opacity: 0;
   transform: translateY(-100px);
-  transition: opacity 2s ease, transform 2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
-header nav button {
-  border: none;
-  background: inherit;
-  position: absolute;
-  top: 2px;
-  right: 2px;
+.header-home nav.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
-header nav ul {
+.header-home nav ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,49 +40,81 @@ header nav ul {
   text-align: center;
   padding: 1rem 0;
 }
-header nav ul li {
+.header-home nav ul li {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
   width: auto;
   margin: 1rem 0;
-  color: black;
-  transition: 0.2;
-}
-header nav ul li:hover {
-  transform: scale(1.2);
-}
-header nav.open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  color: white;
+  border-bottom: 2px solid #8b4512;
 }
 
-.header-home .banner {
+.header-close {
+  border: none;
+  background: inherit;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.header_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 0 0 100%;
+}
+.header_top figure {
+  margin-inline: 0.7rem;
+  border: none;
+}
+.header_top button {
+  border: none;
+  background: inherit;
+  color: white;
+}
+
+.banner {
   flex-basis: 100%;
-  min-height: 50dvh;
+  min-height: 80dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: center;
+  gap: 2rem;
   text-align: center;
+  border-top: 3px solid white;
+  background-image: url("../img/banner.webp");
+  background-size: cover;
+  background-position: center;
+}
+.banner p {
+  padding: 1rem;
+}
+.banner a {
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  background-color: #eb8b46;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+.banner a:hover {
+  transform: scale(1.1);
+  border: 1px solid white;
+  color: black;
 }
 
-@media (min-width: 768px) {
-  header {
+@media (min-width: 1024px) {
+  .header-home {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
   }
-  header .header_top {
-    flex-basis: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  header nav {
-    flex-basis: 40%;
+  .header-home nav {
+    flex: 1 0 40%;
     position: static;
     opacity: 1;
     transform: none;
@@ -104,14 +124,28 @@ header nav.open {
     width: auto;
     height: auto;
   }
-  header nav ul {
+  .header-home nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-inline: 1rem;
+    flex: 1;
   }
-  header button {
+  .header-home nav ul li {
+    border-right: 1px solid white;
+    padding-inline: 1rem;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.12);
+    margin-inline: 1rem;
+  }
+  .header_top {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  button {
     display: none;
   }
 }

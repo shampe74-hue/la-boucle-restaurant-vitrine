@@ -8,53 +8,71 @@ footer {
   gap: 3rem;
   padding: 1.5rem;
 }
-footer .footer__brand {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
+footer li {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  width: fit-content;
+  margin: 1.5rem 0;
+  transition: 0.2;
 }
-footer .footer__contact a {
+footer li:hover {
+  transform: scale(1.2);
+}
+footer li a {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
-  margin: 1.5rem 0;
-  transition: 0.2;
 }
-footer .footer__contact a:hover {
-  transform: scale(1.2);
+footer .footer__brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid white;
 }
-footer .footer__info li {
-  margin: 1.5rem 0;
-  transition: 0.2;
+footer .footer__contact {
+  padding: 1rem;
 }
-footer .footer__info li:hover {
-  transform: scale(1.2);
+footer .footer__info {
+  padding: 1rem;
 }
-footer p {
+footer span {
   text-align: center;
+  border-top: 2px solid white;
+  padding: 1rem;
+  display: block;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 @media (min-width: 768px) {
-  footer {
+  .footer_conteneur {
+    max-width: 1000px;
+    width: 80%;
+    margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    grid-template-rows: auto;
+    gap: 1rem;
     grid-template-areas: "brand brand" "contact info" "copy copy";
   }
-  footer .footer__brand {
+  .footer_conteneur .footer__brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     grid-area: brand;
+    text-align: center;
   }
-  footer .footer__contact {
+  .footer_conteneur .footer__contact {
     grid-area: contact;
   }
-  footer .footer__info {
+  .footer_conteneur .footer__info {
     grid-area: info;
   }
-  footer p {
+  .footer_conteneur span {
     grid-area: copy;
+    text-align: center;
   }
 }
 

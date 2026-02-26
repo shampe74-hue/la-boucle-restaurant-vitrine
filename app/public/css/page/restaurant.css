@@ -1,26 +1,65 @@
 .main_p_restaurant {
-  max-width: 1200px;
-  width: 80%;
-  margin: 2rem auto;
+  max-width: 1800px;
+  margin: 0 auto;
 }
-.main_p_restaurant .photo {
+
+.photo {
   min-height: 50dvh;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
-.main_p_restaurant .photo h2 {
+.photo h2 {
   text-align: center;
 }
-.main_p_restaurant .loc {
+
+.card {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.loc {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  padding: 1rem;
 }
-.main_p_restaurant .loc .loc_map {
-  width: 100%;
+.loc .loc_map {
+  width: 95%;
+  margin: 0 auto;
 }
-.main_p_restaurant .loc .loc_map iframe {
+.loc .loc_map iframe {
   width: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .photo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .photo h2 {
+    flex: 0 0 100%;
+  }
+  .photo_diapo {
+    flex: 0 0 50%;
+  }
+  .card {
+    flex: 1 0 40%;
+    margin: auto 0;
+  }
 }
 
 /*# sourceMappingURL=restaurant.css.map */

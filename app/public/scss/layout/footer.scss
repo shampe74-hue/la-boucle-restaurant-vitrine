@@ -8,48 +8,59 @@ footer {
   gap: 3rem;
   padding: 1.5rem;
 
-  .footer__brand {
-    @include flexbox(row, space-evenly, flex-start);
-  }
-
-  .footer__contact {
+  li {
+    @include fluid-text(1rem, 2vw, 1.2rem);
+    width: fit-content;
+    margin: 1.5rem 0;
+    transition: 0.2;
+    &:hover {
+      transform: scale(1.2);
+    }
     a {
       @include flexbox(row, flex-start, center);
       gap: 1.5rem;
-      margin: 1.5rem 0;
-      transition: 0.2;
-      &:hover {
-        transform: scale(1.2);
-      }
     }
   }
 
-  .footer__info {
-    li {
-      margin: 1.5rem 0;
-      transition: 0.2;
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
+  .footer__brand {
+    @include flexbox(row, space-evenly, center);
+    border-bottom: 2px solid white;
   }
-  p {
+
+  .footer__contact {
+    padding: 1rem;
+  }
+
+  .footer__info {
+    padding: 1rem;
+  }
+  span {
     text-align: center;
+    border-top: 2px solid white;
+    padding: 1rem;
+    display: block;
+    @include fluid-text(1rem, 2vw, 1.2rem);
   }
 }
 
 @include responsive($bp-md) {
-  footer {
+  .footer_conteneur {
+    max-width: 1000px;
+    width: 80%;
+    margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    grid-template-rows: auto;
+    gap: 1rem;
     grid-template-areas:
       "brand brand"
       "contact info"
       "copy copy";
 
     .footer__brand {
+      @include flexbox(row, center, center);
       grid-area: brand;
+      text-align: center;
     }
 
     .footer__contact {
@@ -60,8 +71,9 @@ footer {
       grid-area: info;
     }
 
-    p {
+    span {
       grid-area: copy;
+      text-align: center;
     }
   }
 }

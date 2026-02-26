@@ -3,100 +3,129 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  max-width: 1200px;
-  width: 95%;
-  margin-inline: auto;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+.main_menu section {
+  padding: 4rem 0.5rem;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 2rem;
+  background: rgba(235, 139, 70, 0.2);
+}
+.main_menu section:nth-child(even) {
+  background: rgba(255, 255, 255, 0.2);
+}
+.main_menu section figure {
+  flex: 1 0;
+  width: 100%;
+  height: 100%;
+}
+.main_menu section figure picture > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
 }
 
 .btn-nav-second {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
-  background-color: #eb8b46;
+  align-items: flex-start;
+  width: 30%;
   border: none;
-  padding: 1rem;
+  padding: 0.5rem;
+  background-color: #eb8b46;
+  gap: 0.5rem;
 }
 
-.nav-aside {
+aside {
   background-color: #eb8b46;
+  color: white;
   opacity: 0;
-  transform: translateY(-50px);
+  max-height: 0;
   overflow: hidden;
   pointer-events: none;
-  max-height: 0;
-  transition: transform 2s ease, opacity 2s ease, max-height 2s ease;
+  transform: translateY(-50px);
+  transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
 }
-.nav-aside ul {
+aside.open_side {
+  opacity: 1;
+  max-height: 100dvh;
+  transform: translateY(0);
+  pointer-events: auto;
+  overflow: visible;
+}
+aside ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
-  padding: 1rem;
+  align-items: center;
 }
-
-.menu_restau figure {
-  max-width: 250px;
-  max-height: 250px;
+aside ul li {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
 }
-
-.nav-aside.open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  max-height: 500px;
+aside ul li a {
+  display: block;
 }
 
 @media (min-width: 768px) {
+  .main_menu section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .main_menu section h3 {
+    flex: 0 0 100%;
+  }
+  .main_menu section ul {
+    flex: 0 1 40%;
+    text-align: center;
+    align-self: center;
+  }
+  .main_menu section figure {
+    flex: 1 0 40%;
+    width: 100%;
+    height: 100%;
+  }
+  .main_menu section figure picture > img {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+  }
   .btn-nav-second {
     display: none;
   }
-  .nav-aside {
-    background-color: #eb8b46;
+  aside {
     opacity: 1;
-    transform: translateY(0);
+    max-height: 70px;
     overflow: visible;
     pointer-events: auto;
-    max-height: 100vh;
-    transition: transform 2s ease, opacity 2s ease, max-height 2s ease;
+    transform: translateY(0);
+    transition: none;
+    transform: translateY(0);
+    pointer-events: auto;
+    overflow: visible;
   }
-  .nav-aside ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
-    padding: 1rem;
-  }
-  .main_menu {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    grid-template-areas: "aside menu";
-    gap: 5rem;
-    margin-inline: auto;
-  }
-  .main_menu aside {
-    grid-area: aside;
-  }
-  .main_menu .menu_restau {
-    grid-area: menu;
-    max-width: 1000px;
-    padding: 2rem;
-  }
-  .main_menu .menu_restau section {
+  aside ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
   }
-  .main_menu .menu_restau section h3 {
-    flex: 0 0 100%;
+  aside ul li {
+    margin: 0 2rem;
+    padding: 0.5rem;
+    border-right: 2px solid white;
   }
-  .main_menu .menu_restau section ul {
-    flex: 0 0 60%;
-  }
-  .main_menu .menu_restau section figure {
-    flex: 0 0 40%;
+  aside ul li a {
+    display: block;
   }
 }
 
