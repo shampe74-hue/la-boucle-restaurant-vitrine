@@ -1,6 +1,7 @@
 # Site vitrine statique
 
 Pojet terminé
+lien : https://shampe74-hue.github.io/la-boucle-restaurant-vitrine/
 
 Projet personnel et fictif réalisé dans le cadre de mon apprentissage du developpement web.
 
