@@ -1,19 +1,31 @@
-const nav = document.querySelector("nav");
-const openBtn = document.querySelector(".header-btn");
+const openBtn = document.querySelector(".btn-nav");
 const closeBtn = document.querySelector(".header-close");
+const nav = document.querySelector(".nav-header");
 
-openBtn.addEventListener("click", () => {
-  nav.classList.add("open");
-});
+if (openBtn && nav) {
+  openBtn.addEventListener("click", () => {
+    nav.classList.add("active");
+  });
+}
 
-closeBtn.addEventListener("click", () => {
-  nav.classList.remove("open");
-});
+if (closeBtn && nav) {
+  closeBtn.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+}
 
 const btnAside = document.querySelector(".btn-nav-second");
-const navAside = document.querySelector(".nav-aside");
+const navAside = document.querySelector(".nav-header-second");
+const closeAside = document.querySelector(".header-close-second");
 
-btnAside.addEventListener("click", () => {
-  navAside.classList.toggle("open_side");
-});
+if (btnAside && navAside) {
+  btnAside.addEventListener("click", () => {
+    navAside.classList.add("active");
+  });
+}
 
+if (closeAside && navAside) {
+  closeAside.addEventListener("click", () => {
+    navAside.classList.remove("active");
+  });
+}

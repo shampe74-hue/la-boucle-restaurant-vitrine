@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Le restaurant La Boucle est un site vitrine fictif qui à pour but de promouvoir mon cv et mes services en ligne."
+      content="Le restaurant La Boucle est un site vitrine fictif qui a pour but de promouvoir mon cv et mes services en ligne."
     />
     <meta name="robots" content="index, follow" />
 
@@ -15,7 +15,7 @@
     />
     <meta
       property="og:description"
-      content="Le restaurant La Boucle est un site vitrine fictif qui à pour but de promouvoir mon cv et mes services en ligne."
+      content="Le restaurant La Boucle est un site vitrine fictif qui à pour but de promouvoir mon CV et mes services en ligne."
     />
     <meta
       property="og:image"
@@ -28,6 +28,11 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="app/public/img/favicon.png" />
+
+    <link
+      rel="canonical"
+      href="https://shampe74-hue.github.io/la-boucle-restaurant-vitrine/"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,7 +62,7 @@
 
         <h1><a href="index.html">La Boucle</a></h1>
 
-        <button class="header-btn">
+        <button class="header-btn" aria-label="Ouvrir le menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -79,7 +84,7 @@
       </div>
 
       <nav aria-label="Navigation principale">
-        <button class="header-close">
+        <button class="header-close" aria-label="fermer le menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -98,7 +103,7 @@
           </svg>
         </button>
         <ul>
-          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="index.html">Accueil</a></li>
           <li><a href="app/pages/FR/menu.html">Menu</a></li>
           <li>
             <a href="app/pages/FR/restaurant.html">Restaurant</a>
@@ -124,7 +129,7 @@
 
     <main class="home_main">
       <section class="home_section">
-        <h3>Qui sommes nous?</h3>
+        <h3>Qui sommes-nous?</h3>
 
         <p>
           La Boucle est un restaurant français situé à Genève. Ce site vitrine
@@ -144,7 +149,11 @@
               srcset="app/public/img/restaurant-lg.webp"
               type="image/webp"
             />
-            <img src="app/public/img/restaurant-lg.webp" alt="" />
+            <img
+              src="app/public/img/restaurant-lg.webp"
+              alt="restaurant au bord du lac"
+              loading="lazy"
+            />
           </picture>
         </figure>
       </section>
@@ -285,7 +294,7 @@
               </li>
               <li>
                 <a href="app/pages/FR/politique.html"
-                  >Politique et confidentialité</a
+                  >Politique de confidentialité</a
                 >
               </li>
               <li><a href="app/pages/FR/aide.html">Aide</a></li>
