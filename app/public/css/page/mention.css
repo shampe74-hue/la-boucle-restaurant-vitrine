@@ -1,0 +1,14 @@
+.privacy,
+.help,
+.legal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 1800px;
+  width: 95%;
+  margin: 2rem auto;
+  gap: 3rem;
+}
+
+/*# sourceMappingURL=mention.css.map */

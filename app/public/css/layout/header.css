@@ -46,6 +46,10 @@
   margin: 1rem 0;
   color: white;
   border-bottom: 2px solid #8b4512;
+  transition: transform 0.2s ease;
+}
+.header-home nav ul li:hover {
+  transform: scale(1.1);
 }
 
 .header-close {

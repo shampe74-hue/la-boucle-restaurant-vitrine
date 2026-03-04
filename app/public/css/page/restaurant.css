@@ -16,13 +16,15 @@
   text-align: center;
 }
 
+.photo_diapo img {
+  width: 100%;
+}
+
 .card {
   width: 70%;
   margin: 0 auto;
   text-align: center;
-  background-color: white;
   padding: 2rem;
-  border-radius: 2rem;
 }
 
 .loc {

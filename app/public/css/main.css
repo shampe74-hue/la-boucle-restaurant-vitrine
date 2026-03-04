@@ -25,6 +25,15 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a:visited {
+  color: beige;
+}
+a:hover {
+  color: black;
+}
+a:focus {
+  color: red;
+}
 
 img,
 picture,
@@ -124,6 +133,10 @@ footer li {
   margin: 1rem 0;
   color: white;
   border-bottom: 2px solid #8b4512;
+  transition: transform 0.2s ease;
+}
+.header-home nav ul li:hover {
+  transform: scale(1.1);
 }
 
 .header-close {
@@ -392,7 +405,7 @@ footer span {
     flex: 0 0 40%;
   }
   .home_section figure picture > img {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
   }
   .home-horaire {
@@ -523,7 +536,10 @@ aside ul li a {
   aside ul li {
     margin: 0 2rem;
     padding: 0.5rem;
-    border-right: 2px solid white;
+    transition: transform 0.2s ease;
+  }
+  aside ul li:hover {
+    transform: scale(1.1);
   }
   aside ul li a {
     display: block;
@@ -547,13 +563,15 @@ aside ul li a {
   text-align: center;
 }
 
+.photo_diapo img {
+  width: 100%;
+}
+
 .card {
   width: 70%;
   margin: 0 auto;
   text-align: center;
-  background-color: white;
   padding: 2rem;
-  border-radius: 2rem;
 }
 
 .loc {
@@ -591,6 +609,18 @@ aside ul li a {
     flex: 1 0 40%;
     margin: auto 0;
   }
+}
+.privacy,
+.help,
+.legal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 1800px;
+  width: 95%;
+  margin: 2rem auto;
+  gap: 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */

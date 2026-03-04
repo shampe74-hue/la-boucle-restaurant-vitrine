@@ -26,6 +26,15 @@ ol {
 a {
   text-decoration: none;
   color: inherit;
+  &:visited {
+    color: beige;
+  }
+  &:hover {
+    color: black;
+  }
+  &:focus {
+    color: red;
+  }
 }
 
 img,
@@ -38,3 +47,4 @@ svg {
 button {
   font: inherit;
 }
+

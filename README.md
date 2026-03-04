@@ -1,10 +1,11 @@
 # Site vitrine statique
 
-Pojet en cours (Work in Progress)
+Pojet terminé
 
 Projet personnel et fictif réalisé dans le cadre de mon apprentissage du developpement web.
 
-## Objectifs 
+## Objectifs
+
 - Structure HTML sémentique.
 - SCSS modulaire
 - Site responsive
@@ -12,4 +13,5 @@ Projet personnel et fictif réalisé dans le cadre de mon apprentissage du devel
 - Utilisation de Git et GitHub
 
 ## Etat du projet
-70%
+
+100%

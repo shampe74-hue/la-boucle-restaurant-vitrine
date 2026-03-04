@@ -86,7 +86,7 @@
     flex: 0 0 40%;
   }
   .home_section figure picture > img {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
   }
   .home-horaire {

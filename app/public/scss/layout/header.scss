@@ -42,6 +42,10 @@
         margin: 1rem 0;
         color: white;
         border-bottom: 2px solid $bg-primary;
+        transition: transform 0.2s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

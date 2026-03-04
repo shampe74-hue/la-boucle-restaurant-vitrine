@@ -1,0 +1,12 @@
+@use "../base/mixins.scss" as *;
+@use "../base/variable.scss" as *;
+
+.privacy,
+.help,
+.legal {
+  @include flexbox(column, flex-start, stretch);
+  max-width: 1800px;
+  width: 95%;
+  margin: 2rem auto;
+  gap: 3rem;
+}

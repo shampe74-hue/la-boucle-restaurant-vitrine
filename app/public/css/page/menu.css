@@ -122,7 +122,10 @@ aside ul li a {
   aside ul li {
     margin: 0 2rem;
     padding: 0.5rem;
-    border-right: 2px solid white;
+    transition: transform 0.2s ease;
+  }
+  aside ul li:hover {
+    transform: scale(1.1);
   }
   aside ul li a {
     display: block;
